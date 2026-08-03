@@ -9,10 +9,13 @@ app = Flask(__name__)
 init_db()
 
 
+from flask import redirect
+
+
 @app.get("/")
 def index():
-    # Servir la interfaz principal del alumno (QR dinámico)
-    return send_from_directory(app.root_path, "student_app.html")
+    # Redirigir a la interfaz del alumno para evitar conflictos con archivos estáticos
+    return redirect("/student-app")
 
 
 @app.get("/student-app")
