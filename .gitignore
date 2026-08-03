@@ -1,0 +1,13 @@
+.DS_Store
+node_modules/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.venv/
+venv/
+*.db
+asistencia.db
+reportes/*.txt
+models/*.onnx
+
