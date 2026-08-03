@@ -11,7 +11,8 @@ init_db()
 
 @app.get("/")
 def index():
-    return send_from_directory(app.root_path, "index.html")
+    # Servir la interfaz principal del alumno (QR dinámico)
+    return send_from_directory(app.root_path, "student_app.html")
 
 
 @app.get("/student-app")
