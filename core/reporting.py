@@ -26,17 +26,27 @@ def build_summary_report(title=None):
 def send_report_via_telegram(report_text, bot_token, chat_id, caption="Reporte REC"):
     if not bot_token or not chat_id:
         raise ValueError("Missing Telegram configuration")
-    with tempfile.NamedTemporaryFile("w", delete=False, encoding="utf-8", suffix=".txt") as f:
-        f.write(report_text)
-        temp_path = f.name
-    with open(temp_path, 'rb') as fh:
-        files = {'document': (os.path.basename(temp_path), fh)}
-        payload = {'chat_id': chat_id, 'caption': caption}
+
+    temp_path = None
+    try:
+        with tempfile.NamedTemporaryFile("w", delete=False, encoding="utf-8", suffix=".txt") as f:
+            f.write(report_text)
+            temp_path = f.name
+
         url = f"https://api.telegram.org/bot{bot_token}/sendDocument"
-        r = requests.post(url, data=payload, files={'document': (os.path.basename(temp_path), open(temp_path,'rb'))}, timeout=20)
-    os.unlink(temp_path)
-    r.raise_for_status()
-    return True
+        with open(temp_path, 'rb') as fh:
+            files = {'document': (os.path.basename(temp_path), fh)}
+            payload = {'chat_id': chat_id, 'caption': caption}
+            r = requests.post(url, data=payload, files=files, timeout=20)
+            r.raise_for_status()
+
+        return True
+    finally:
+        if temp_path and os.path.exists(temp_path):
+            try:
+                os.unlink(temp_path)
+            except Exception:
+                pass
 
 
 def generate_and_send_report(title=None, bot_token=None, chat_id=None):

@@ -1,0 +1,26 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.env
+.venv/
+venv/
+
+# Database
+asistencia.db
+*.sqlite3
+
+# Models, reports and large binaries
+models/
+reportes/
+*.onnx
+
+# Editor files
+.DS_Store
+Thumbs.db
+
+# Render
+.render/
+
+# Logs
+*.log
