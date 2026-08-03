@@ -1,0 +1,19 @@
+📝 REPORTE DE ASISTENCIA REC
+━━━━━━━━━━━━━━━━━━━━━━
+📖 Materia: Formulaciòn y Gestiòn de Proyectos
+📅 Fecha: 20/05/2026
+⏰ Apertura: 09:59:41 | Cierre: 09:59:43
+📊 Sesión ID: #6
+━━━━━━━━━━━━━━━━━━━━━━
+
+📈 Métricas de la Clase:
+✅ Presentes: 0
+⚠️ Retardos: 0
+❌ Inasistencias: 1
+👥 Total Alumnos Enrolados: 1
+
+📋 Detalle de Ingresos:
+⚠️ _No se registraron alumnos durante la sesión._
+
+━━━━━━━━━━━━━━━━━━━━━━
+🤖 _Reporte generado localmente por Sistema REC en Fedora_

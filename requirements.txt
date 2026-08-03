@@ -1,0 +1,7 @@
+﻿Flask
+SQLAlchemy
+psycopg[binary]
+pyotp
+pyTelegramBotAPI
+gunicorn
+requests

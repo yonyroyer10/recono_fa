@@ -1,0 +1,22 @@
+📝 REPORTE DE ASISTENCIA — REC
+━━━━━━━━━━━━━━━━━━━━━━
+📖 Materia: Formulaciòn y Gestiòn de Proyectos
+📅 Fecha: 03/08/2026
+⏰ Apertura: 13:50:41 | Cierre: 13:50:54
+📊 Sesión ID: #35
+━━━━━━━━━━━━━━━━━━━━━━
+
+📈 Métricas:
+✅ Presentes: 1
+⚠️ Retardos: 0
+❌ Inasistencias: 1
+👥 Total enrolados: 2
+
+📋 Detalle de Asistentes:
+
+N°  | Código | Estudiante        | Hora     | Vía
+----|--------|-------------------|----------|----
+01  | 222055 | yony royer        | 18:50:48 | FAC
+
+━━━━━━━━━━━━━━━━━━━━━━
+🤖 _Sistema REC · Fedora Workstation_
