@@ -6,7 +6,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # Ruta de la Base de Datos SQLite
 DB_PATH = BASE_DIR / "asistencia.db"
-DATABASE_URL = f"sqlite:///{DB_PATH}"
+DEFAULT_DATABASE_URL = f"sqlite:///{DB_PATH}"
+DATABASE_URL = os.getenv("DATABASE_URL", DEFAULT_DATABASE_URL)
+
+# Compatibilidad con Render / PostgreSQL
+if DATABASE_URL.startswith("postgres://"):
+    DATABASE_URL = DATABASE_URL.replace("postgres://", "postgresql://", 1)
 
 # Directorio de Modelos de Inteligencia Artificial (ONNX)
 MODELS_DIR = BASE_DIR / "models"
